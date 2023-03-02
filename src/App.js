@@ -1,24 +1,23 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Characters from "./components/Characters";
+import "./App.css";
 
 class App extends Component {
   state = {};
 
   async componentDidMount() {
     const results = await axios.get(
-      `https://thesimpsonsquoteapi.glitch.me/quotes?count=50`
+      `https://thesimpsonsquoteapi.glitch.me/quotes?count=20`
     );
 
-    this.setState({ simpsons: results.data });
+    this.setState({ characters: results.data });
   }
 
   render() {
-    console.log(this.state);
+    if (!this.state.characters) return <p>Loading...</p>;
 
-    //if data is here, loop over the data
-    //think defensive check
-
-    return <h1>Waiting for data....</h1>;
+    return <Characters characters={this.state.characters} />;
   }
 }
 
