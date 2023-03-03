@@ -19,7 +19,7 @@ class App extends Component {
 
     return (
       <>
-        <h1>Amelia's Simpsons App</h1>
+        <p>Amelia's Simpsons App</p>
         <Characters characters={this.state.characters} />
       </>
     );
