@@ -17,7 +17,12 @@ class App extends Component {
   render() {
     if (!this.state.characters) return <p>Loading...</p>;
 
-    return <Characters characters={this.state.characters} />;
+    return (
+      <>
+        <h1>Russells Simpsons App</h1>
+        <Characters characters={this.state.characters} />
+      </>
+    );
   }
 }
 
