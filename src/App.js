@@ -14,7 +14,7 @@ const App = () => {
 
   useEffect(() => {
     getApiData();
-  }, []); //run once
+  }, []); //run once.
 
   return (
     <>
