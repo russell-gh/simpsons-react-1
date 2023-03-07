@@ -6,6 +6,7 @@ const App = () => {
   const [characters, setCharacters] = useState();
   const [searchTerm, setSearchTerm] = useState();
   const [sortOrder, setSortOrder] = useState("asc");
+  //above is state
 
   const getApiData = async () => {
     const results = await axios.get(
