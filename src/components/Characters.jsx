@@ -1,18 +1,21 @@
 import React, { Component } from "react";
 import Character from "./Character";
-
+// father
 class Characters extends Component {
   render() {
-    const { characters } = this.props;
+    const { characters, onLikeToggle, onDelete } = this.props;
 
     return characters.map((item, index) => {
       return (
-        <div className="character" key={item.quote + item.name}>
+        <div className="character" key={item.uniqueId}>
           <Character
+            liked={item.liked}
             name={item.character}
-            quote={item.quote}
             image={item.image}
+            quote={item.quote}
             characterDirection={item.characterDirection}
+            onDelete={onDelete}
+            onLikeToggle={onLikeToggle}
           />
         </div>
       );

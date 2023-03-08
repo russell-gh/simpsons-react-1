@@ -1,24 +1,20 @@
 import React, { Component } from "react";
 
 class Name extends Component {
-  state = { liked: false };
-
-  onLikeToggle = () => {
-    this.setState({ liked: !this.state.liked });
-  };
-
   render() {
-    const { name } = this.props;
-    console.log(this.state.liked);
+    console.log(this.props);
+    const { name, liked, onLikeToggle, quote, onDelete } = this.props;
+
     return (
       <div>
         <h1>{name}</h1>
         <button
-          style={{ backgroundColor: this.state.liked ? "red" : "blue" }}
-          onClick={this.onLikeToggle}
-        >
-          Like/Dislike
+          style={{ backgroundColor: liked ? "red" : "blue" }}
+          onClick={() => onLikeToggle(quote)}>
+          LIKE/DISLIKE
         </button>
+        <button onClick={() => onDelete(quote)}>DELETE</button>
+        {/**wrap anonymous when send data */}
       </div>
     );
   }
