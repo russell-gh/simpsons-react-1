@@ -86,28 +86,41 @@ class App extends Component {
     return (
       <>
         <div className="nav">
-          <select>
+          {/* <select class="select">
             {this.state.characters.map((name) => {
               return <option key={name.quote}>{name.character}</option>;
             })}
-          </select>
-          <button onClick={this.getData}>Get new data</button>
-          <label htmlFor="filter">Filter: </label>
-          <input id="filter" type="text" onInput={this.onInput} />
-          <h3>total likes ={total}</h3>
-          <lable htmlFor="sort">Sort</lable>
-          <select id="sort" onChange={this.onSort}>
-            <option value="asc">ASC</option>
-            <option value="dsc">DSC</option>
-          </select>
+          </select> */}
+          <button class="newData" onClick={this.getData}>
+            Get new data
+          </button>
+          <div class="filter">
+            <label htmlFor="filter">Filter: </label>
+            <input
+              id="filter"
+              type="text"
+              onInput={this.onInput}
+              class="label"
+            />
+          </div>
+          <h3 class="total">total likes ={total}</h3>
+          <div class="sort">
+            <lable htmlFor="sort">Sort</lable>
+            <select class="select" id="sort" onChange={this.onSort}>
+              <option value="asc">ASC</option>
+              <option value="dsc">DSC</option>
+            </select>
+          </div>
         </div>
-        <Characters
-          characters={filtered}
-          onLikeToggle={this.onLikeToggle}
-          onDelete={this.onDelete}
-          getTotal={this.getTotal}
-          getData={this.getData}
-        />
+        <div class="grid">
+          <Characters
+            characters={filtered}
+            onLikeToggle={this.onLikeToggle}
+            onDelete={this.onDelete}
+            getTotal={this.getTotal}
+            getData={this.getData}
+          />
+        </div>
       </>
     );
   }

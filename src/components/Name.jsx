@@ -9,11 +9,13 @@ class Name extends Component {
       <div>
         <h1>{name}</h1>
         <button
-          style={{ backgroundColor: liked ? "red" : "blue" }}
+          style={{ backgroundColor: liked ? " #ffd90f" : "rgb(29, 144, 233)" }}
           onClick={() => onLikeToggle(quote)}>
-          LIKE/DISLIKE
+          LIKE
         </button>
-        <button onClick={() => onDelete(quote)}>DELETE</button>
+        <button class="buttonD" onClick={() => onDelete(quote)}>
+          DELETE
+        </button>
         {/**wrap anonymous when send data */}
       </div>
     );

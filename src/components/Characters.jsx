@@ -8,15 +8,18 @@ class Characters extends Component {
     return characters.map((item, index) => {
       return (
         <div className="character" key={item.uniqueId}>
-          <Character
-            liked={item.liked}
-            name={item.character}
-            image={item.image}
-            quote={item.quote}
-            characterDirection={item.characterDirection}
-            onDelete={onDelete}
-            onLikeToggle={onLikeToggle}
-          />
+          <div class="card">
+            {" "}
+            <Character
+              liked={item.liked}
+              name={item.character}
+              image={item.image}
+              quote={item.quote}
+              characterDirection={item.characterDirection}
+              onDelete={onDelete}
+              onLikeToggle={onLikeToggle}
+            />
+          </div>
         </div>
       );
     });
