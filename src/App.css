@@ -83,6 +83,7 @@
   margin: 50px;
   max-width: 500px;
   min-width: 300px;
+  text-align: center;
 }
 
 .card h1 {
@@ -102,6 +103,7 @@
   width: 90px;
   height: 30px;
   border: 2px solid #ffd90f;
+  border-radius: 25px;
 }
 .buttonD {
   background-color: #ffd90f;
