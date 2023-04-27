@@ -9,7 +9,7 @@ class Name extends Component {
       <div>
         <h1>{name}</h1>
         <button
-          style={{ backgroundColor: liked ? " #ffd90f" : "rgb(29, 144, 233)" }}
+          style={{ backgroundColor: liked ? " #ffd90f" : " #ffd90f"  }}
           onClick={() => onLikeToggle(quote)}>
           LIKE
         </button>

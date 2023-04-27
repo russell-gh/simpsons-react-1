@@ -84,14 +84,18 @@ class App extends Component {
     }
 
     return (
-      <>
-        <div className="nav">
-          {/* <select class="select">
+      <body>
+        {/* <select class="select">
             {this.state.characters.map((name) => {
               return <option key={name.quote}>{name.character}</option>;
             })}
           </select> */}
-          <button class="newData" onClick={this.getData}>
+
+        <div className="container">
+          <h1 className="title">Simpson characters app!</h1>
+        </div>
+        <div className="nav">
+          <button className="newData" onClick={this.getData}>
             Get new data
           </button>
           <div class="filter">
@@ -121,7 +125,7 @@ class App extends Component {
             getData={this.getData}
           />
         </div>
-      </>
+      </body>
     );
   }
 }
